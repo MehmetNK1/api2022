@@ -1,3 +1,6 @@
+package get_requests;
+
+import base_urls.JsonPlaceHolderBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
@@ -5,7 +8,7 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class Get03 extends BaseUrls {
+public class Get03 extends JsonPlaceHolderBaseUrl {
 
 
     //  Given
@@ -28,7 +31,6 @@ public class Get03 extends BaseUrls {
     public void get01(){
         //1. step : Set the Url
         //String url = "https://jsonplaceholder.typicode.com/todos/23"; // onerilmiyor
-
 
         spec.pathParams("first","todos","second",23);
 
@@ -53,6 +55,20 @@ public class Get03 extends BaseUrls {
                 .body("title",equalTo("et itaque necessitatibus maxime molestiae qui quas velit")
                 ,"completed",equalTo(false)
                 ,"userId",equalTo(2));
+
+        /*  not 1: Assertion yaparken Java calismayi durdurdugunda hata sonra kodlar calismaz.
+            boylece hata sonrasi assertion lar hakkinda bilgi sahibi olanayiz
+            fakat hata oncesi assertion lar gecmistir
+
+
+           not 2: Eger kodumuzu hata noktasinda duracak sekilde yazarsak "hard assertion" yapmis oluruz
+
+           Not 3: Eğer kodumuzu hata noktasında duramayacak şekilde yazarsak "soft Assertion" yapmış oluyoruz.
+
+           Not 4: Eğer çoklu body() methodu içinde assert yaparsak "Hard Assert",
+           tek body() methodu içinde assert yaparsak "Soft Assert"  yapmış oluyoruz.
+
+        */
 
     }
 }
