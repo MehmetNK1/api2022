@@ -17,7 +17,7 @@ public class Get05 extends HerOkuAppBaseUrl {
         Then
             Status code is 200
 	  	And
-	  		Among the data there should be someone whose firstname is "Adamz" and last name is "Dear"
+	  		Among the data there should be someone whose firstname is "Aaron" and lastname is "Chen"
      */
 
     @Test
@@ -25,6 +25,7 @@ public class Get05 extends HerOkuAppBaseUrl {
 
         //1. step : set the url
         spec.pathParam("first","booking")
+                // queryParams url de "?" ile baslar soru isaretinden sonrakileri bulmak icin kullandik
                 .queryParams("firstname","Aaron",
         "lastname","Chen");
 
@@ -37,6 +38,7 @@ public class Get05 extends HerOkuAppBaseUrl {
         //4. step : do assertion
         response.then().assertThat().statusCode(200);
         assertTrue(response.asString().contains("bookingid"));
+        //String 'e cevirme yapilip iceriyormu islemi yapildi
 
     }
 }

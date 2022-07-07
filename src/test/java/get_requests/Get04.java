@@ -45,8 +45,9 @@ public class Get04 extends JsonPlaceHolderBaseUrl {
                 .assertThat().
                 statusCode(200)
                 .contentType(ContentType.JSON)
-                .body("id",hasSize(200)
+                .body("id",hasSize(200) //id nin kac tane oldugunu sayan method - hasSize
                 ,"title",hasItem("quis eius est sint explicabo")
+                        // hasItem contains ile ayni islemi yapar ama bu islem islem icin hasItem kullanilir
                 ,"userId",hasItems(2, 7, 9));
 
 
