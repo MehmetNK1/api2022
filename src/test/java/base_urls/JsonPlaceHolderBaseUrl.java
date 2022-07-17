@@ -6,14 +6,14 @@ import org.junit.Before;
 
 public class JsonPlaceHolderBaseUrl {
 
-
     protected RequestSpecification spec;
 
-    // Before annotation i kullandigimiz medhotlar her Test metodhodundan once kullanilir
+    // @Before annotation'ı kullandığımız methodlar her  Test metodondan önce çalıştırılır.
     @Before
-    public void  setUp(){
+    public void setUp(){
 
-        spec = new RequestSpecBuilder().setBaseUri("https://jsonplaceholder.typicode.com/").build();
+        spec = new RequestSpecBuilder().setBaseUri("https://jsonplaceholder.typicode.com").build();
+
     }
 
 

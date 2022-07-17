@@ -37,7 +37,6 @@ public class Get09 extends HerOkuAppBaseUrl {
         //1. step : set the url
         spec.pathParams("first","booking","second",91);
 
-
         //2. step : set the expedted data
 
         Map<String,String> bookingdatesMap = new HashMap<>();
@@ -71,7 +70,6 @@ public class Get09 extends HerOkuAppBaseUrl {
 
         assertEquals(bookingdatesMap.get("checkin"),((Map)actualDataMap.get("bookingdates")).get("checkin"));
         assertEquals(bookingdatesMap.get("checkout"),((Map)actualDataMap.get("bookingdates")).get("checkout"));
-
 
 
     }
