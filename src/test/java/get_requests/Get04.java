@@ -49,10 +49,5 @@ public class Get04 extends JsonPlaceHolderBaseUrl {
                 ,"title",hasItem("quis eius est sint explicabo")
                         // hasItem contains ile ayni islemi yapar ama bu islem islem icin hasItem kullanilir
                 ,"userId",hasItems(2, 7, 9));
-
-
-
-
     }
-
 }

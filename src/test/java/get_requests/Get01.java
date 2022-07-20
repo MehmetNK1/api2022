@@ -41,6 +41,17 @@ public class Get01 {
         And
             Status Line should be HTTP/1.1 200 OK
 
+            verilen
+             https://restful-booker.herokuapp.com/booking/3
+         Ne zaman
+             Kullanıcı url'ye bir GET İsteği gönderir
+         O zamanlar
+             HTTP Durum Kodu 200 olmalıdır
+         Ve
+             İçerik Türü JSON olmalıdır
+         Ve
+             Durum Satırı HTTP/1.1 olmalıdır 200 TAMAM
+
      */
 
 
