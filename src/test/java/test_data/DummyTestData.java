@@ -1,6 +1,5 @@
 package test_data;
 
-import pojos.DummyDataPojo;
 
 import java.util.HashMap;
 import java.util.Map;
